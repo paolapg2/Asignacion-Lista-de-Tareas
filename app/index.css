@@ -20,8 +20,8 @@ body {
   background-color: inherit;
   border: 2px solid #ef4444;
   color: #ef4444;
-  justify-content: center;
   margin-top: 1rem;
+  margin-left: 10px;
 }
 
 #container_list-btn:active {
@@ -32,9 +32,9 @@ body {
 
 /* Contenedor general */
 .container {
-  width: 90%;
-  height: 120%;
-  margin: 105px auto;
+  width: 95%;
+  height: fit-content;
+  margin: auto;
 }
 
 /* Title */
@@ -83,26 +83,12 @@ body {
   background: #8A84F8;
 }
 
-.ul {
-  list-style: none;
-  height: 300px;
-  width: 420px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
 /* Contenedor de la lista de tareas */
 .container_todo_list {
   margin-top: 1rem;
   width: 100%;
-  height: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  height: fit-content;
   text-overflow: ellipsis;
-  list-style: none;
   overflow-y: scroll;
 }
 
@@ -110,9 +96,8 @@ body {
 
 .container_list {
   width: 100%;
-  height: 70px;
+  height: fit-content;
   display: flex;
-  overflow: visible;
 }
 
 /* sub-contenedor del checkbox y la tarea */
@@ -120,24 +105,25 @@ body {
   display: flex;
   width: 80%;
   height: 100%;
-  align-items: top;
-  overflow:inherit;
-  white-space: initial;
-  text-align: left;
-  margin-right: 15px;
+  align-items: center;
+  text-overflow: initial;
+  overflow-y: auto;
 }
 
 .casilla {
-  position: inherit;
+  position: relative;
   left: 20px;
 }
 
 .actividad {
   position: relative;
-  left: 20px;
+  left: 50px;
   color: white;
+  margin-right: 50px;
+  text-align: justify;
 }
 
+/* scroll */
 .scroll-container {
   display: block;
   margin: 0 auto;
@@ -152,6 +138,13 @@ body {
   scroll-behavior: smooth;
 }
 
+.ul {
+  list-style: none;
+  text-align: center;
+  width: 80%;
+  height: fit-content;
+}
+
 @media (min-width:768px) {
   .btn_todo {
     display: none;
@@ -164,11 +157,22 @@ body {
 
 @media (min-width: 1024px ) {
   .title {
-      width: 50%;
+      width: 100%;
       font-size: 6rem;
   }
 
   .container {
       width: 100%;
   }
+
+  .input {
+    width: 60%;
+    height: 40px;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #808080;
+    background: none;
+    color: white;
+  }
+  
 }
